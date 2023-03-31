@@ -1,0 +1,10 @@
+# Use citations for all outputs
+citeproc: true
+# Produces more consistent looking citations when using LaTeX
+cite-method: biblatex
+# The bibliography is missing when using plain pdflatex with biblatex
+pdf-engine: latexmk
+filters:
+  # Add support for acronyms in Markdown
+  - ${.}/acronyms.lua
+metadata-file: ${.}/metadata.yaml

@@ -1,0 +1,12 @@
+papersize: a4
+documentclass: report
+pagestyle: headings
+numbersections: true
+bibliography: true
+link-citations: true
+lang: de
+biblio-title: Literatur
+acronyms-title: Abkürzungsverzeichnis
+arbeit-art: Masterarbeit
+arbeit-fachgebiet: Medieninformatik
+arbeit-matrikelnummer: 123456
