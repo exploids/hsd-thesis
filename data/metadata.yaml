@@ -10,3 +10,6 @@ acronyms-title: Abkürzungsverzeichnis
 arbeit-art: Masterarbeit
 arbeit-fachgebiet: Medieninformatik
 arbeit-matrikelnummer: 123456
+acronymoptions:
+  - printonlyused
+  - withpage

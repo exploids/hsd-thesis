@@ -7,4 +7,5 @@ pdf-engine: latexmk
 filters:
   # Add support for acronyms in Markdown
   - ${.}/acronyms.lua
+  - ${.}/plantuml.lua
 metadata-file: ${.}/metadata.yaml
