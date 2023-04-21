@@ -1,5 +1,3 @@
-# Use citations for all outputs
-citeproc: true
 # Produces more consistent looking citations when using LaTeX
 cite-method: biblatex
 # The bibliography is missing when using plain pdflatex with biblatex
@@ -8,4 +6,7 @@ filters:
   # Add support for acronyms in Markdown
   - ${.}/acronyms.lua
   - ${.}/plantuml.lua
+  - pandoc-crossref
+  # Also use citations for outputs other than PDF
+  - type: citeproc
 metadata-file: ${.}/metadata.yaml

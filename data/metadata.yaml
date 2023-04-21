@@ -1,15 +1,24 @@
 papersize: a4
+geometry: top=2.5cm,left=2.5cm,right=3cm,bottom=2cm
+linestretch: 1.5
 documentclass: report
 pagestyle: headings
 numbersections: true
 bibliography: true
 link-citations: true
-lang: de
-biblio-title: Literatur
-acronyms-title: Abkürzungsverzeichnis
-arbeit-art: Masterarbeit
-arbeit-fachgebiet: Medieninformatik
-arbeit-matrikelnummer: 123456
+biblio-style: iso-authoryear
+toc: true
+logo-options:
+  - height=2cm
+logo-spacing: 1cm
 acronymoptions:
   - printonlyused
   - withpage
+lang: de
+biblio-title: Literatur
+acronyms-title: Abkürzungsverzeichnis
+author-info: 123456
+thesis-type: Masterarbeit
+thesis-area-title: im Fachgebiet
+thesis-area: Medieninformatik
+thesis-supervisor-title: Betreut von
