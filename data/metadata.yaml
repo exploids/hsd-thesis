@@ -8,16 +8,41 @@ bibliography: true
 link-citations: true
 biblio-style: iso-authoryear
 toc: true
+lof: true
+lot: true
+header-includes:
+  - |
+    ```{=latex}
+    \usepackage[all,defaultlines=3]{nowidow}
+    ```
+# custom template values
 logo-options:
   - height=2cm
 logo-spacing: 1cm
 acronymoptions:
   - printonlyused
   - withpage
+author-info: 123456
+# language specific values
 lang: de
 biblio-title: Literatur
+# translations for pandoc-crossref (http://lierdakil.github.io/pandoc-crossref/)
+figureTitle: Abbildung
+figPrefix: Abb.
+lofTitle: |
+  # Abbildungsverzeichnis
+tableTitle: Tabelle
+tblPrefix: Tab.
+lotTitle: |
+  # Tabellenverzeichnis
+listingTitle: Listing
+lstPrefix: Lst.
+lolTitle: |
+  # Listingverzeichnis
+eqnPrefix: Gleichung
+secPrefix: Abschn.
+# translations for the custom template
 acronyms-title: Abkürzungsverzeichnis
-author-info: 123456
 thesis-type: Masterarbeit
 thesis-area-title: im Fachgebiet
 thesis-area: Medieninformatik

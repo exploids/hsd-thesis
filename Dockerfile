@@ -1,8 +1,8 @@
 # https://hub.docker.com/r/pandoc/latex
 FROM pandoc/latex:3.1-alpine
-RUN apk add --no-cache plantuml msttcorefonts-installer fontconfig
+RUN apk add --no-cache plantuml msttcorefonts-installer fontconfig graphviz
 RUN update-ms-fonts
-RUN tlmgr install latexmk adjustbox acronym bigfoot xstring biblatex-iso690
+RUN tlmgr install latexmk adjustbox acronym bigfoot xstring biblatex-iso690 nowidow
 WORKDIR /bin
 # https://github.com/lierdakil/pandoc-crossref/releases
 # must be compatible with pandoc version

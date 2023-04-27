@@ -5,6 +5,7 @@ pdf-engine: latexmk
 filters:
   # Add support for acronyms in Markdown
   - ${.}/acronyms.lua
+  - ${.}/tikzpicture.lua
   - ${.}/plantuml.lua
   - pandoc-crossref
   # Also use citations for outputs other than PDF
