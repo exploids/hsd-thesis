@@ -3,10 +3,10 @@ cite-method: biblatex
 # The bibliography is missing when using plain pdflatex with biblatex
 pdf-engine: latexmk
 filters:
-  # Add support for acronyms in Markdown
-  - ${.}/acronyms.lua
   - ${.}/tikzpicture.lua
   - ${.}/plantuml.lua
+  # Add support for acronyms in Markdown
+  - ${.}/acronyms.lua
   - pandoc-crossref
   # Also use citations for outputs other than PDF
   - type: citeproc

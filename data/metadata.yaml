@@ -10,6 +10,8 @@ biblio-style: iso-authoryear
 toc: true
 lof: true
 lot: true
+links-as-notes: true
+plantuml-theme: plain
 header-includes:
   - |
     ```{=latex}

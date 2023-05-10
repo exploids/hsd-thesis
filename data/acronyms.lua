@@ -9,9 +9,15 @@ local function load_acronyms(meta)
 	local meta_acronyms = meta.acronyms
 	if meta_acronyms ~= nil then
 		local longest = ""
-		for index, acronym in ipairs(meta_acronyms) do
+		local used_names = {}
+		for _, acronym in ipairs(meta_acronyms) do
 			local short = pandoc.utils.stringify(acronym.short)
-			local name = acronym.name or short:gsub("%W", ""):lower() .. index
+			local base_name = acronym.name or short:gsub("%W", ""):lower()
+			local name, counter = base_name, 1
+			while used_names[name] do
+				name, counter = base_name .. counter, counter + 1
+			end
+			used_names[name] = true
 			acronym.name = name
 			acronyms[short] = { name = name, plural = false }
 			if acronym["short-plural"] then
