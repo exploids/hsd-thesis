@@ -38,7 +38,7 @@ end
 local function replace(el)
 	local prefix, text, suffix = el.text:match "^(%p*)(%w+)(%p*)$"
 	local acronym = acronyms[text]
-	if acronym then
+	if acronym and FORMAT:match "latex" then
 		local result = {}
 		if #prefix > 0 then
 			table.insert(result, prefix)
@@ -54,8 +54,39 @@ local function replace(el)
 	end
 end
 
+local function list_of_acronyms(block)
+	if meta_before.acronyms and block.identifier == "acronyms" and FORMAT:match "latex" then
+		local content = ""
+		local title = meta_before["acronyms-title"] and pandoc.utils.stringify(meta_before["acronyms-title"])
+		local longest = pandoc.utils.stringify(meta_before["acronyms-longest"])
+		if title then
+			content = content .. "\\chapter*{" .. title .. "}" ..
+				"\n\\addcontentsline{toc}{chapter}{" .. title .. "}\n"
+		end
+		content = content .. "\\begin{acronym}[" .. longest .. "]"
+		for _, acronym in ipairs(meta_before.acronyms) do
+			local name = pandoc.utils.stringify(acronym.name)
+			local short = pandoc.utils.stringify(acronym.short)
+			local long = pandoc.utils.stringify(acronym.long)
+			local short_plural = acronym["short-plural"] and pandoc.utils.stringify(acronym["short-plural"])
+			local long_plural = acronym["long-plural"] and pandoc.utils.stringify(acronym["long-plural"])
+			content = content .. "\\acro{" .. name .. "}[" .. short .. "]{" .. long .. "}\n"
+			if short_plural then
+				long_plural = long_plural or long
+				content = content .. "\\acroplural{" .. name .. "}[" .. short_plural .. "]{" .. long_plural .. "}\n"
+			end
+		end
+		content = content .. "\\end{acronym}"
+		return pandoc.Div({ pandoc.RawBlock("latex", content) }, { id = "acronyms" })
+	end
+end
+
 local function restore_vars()
 	return meta_before
 end
 
-return { { Meta = load_acronyms }, { Str = replace }, { Meta = restore_vars } }
+return {
+	{ Meta = load_acronyms },
+	{ Str = replace, Div = list_of_acronyms },
+	{ Meta = restore_vars }
+}

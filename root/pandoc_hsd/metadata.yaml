@@ -1,0 +1,28 @@
+papersize: a4
+geometry: top=2.5cm,left=2.5cm,right=3cm,bottom=2cm,includehead,includefoot
+linestretch: 1.5
+documentclass: report
+pagestyle: headings
+csquotes: true
+numbersections: true
+bibliography: true
+link-citations: true
+biblio-style: iso-authoryear
+toc: true
+lof: true
+lot: true
+listing-style: boxed
+plantuml-skinparams:
+  defaultFontName: Source Sans Pro
+  defaultFontSize: 12
+# custom template values
+logo-options:
+  - height=2cm
+logo-spacing: 1cm
+acronymoptions:
+  - printonlyused
+  - withpage
+author-info: 123456
+author-location: Düsseldorf
+affidavit-title: Eidesstattliche Erklärung
+affidavit: Hiermit versichere ich an Eides statt, dass ich diese Arbeit eigenständig verfasst und keine anderen als die angegebenen und bei Zitaten kenntlich gemachten Quellen und Hilfsmittel benutzt habe.

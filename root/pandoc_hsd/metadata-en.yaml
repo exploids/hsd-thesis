@@ -1,0 +1,38 @@
+lang: en
+biblio-title: Bibliography
+months:
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
+  - December
+# translations for pandoc-crossref (http://lierdakil.github.io/pandoc-crossref/)
+figureTitle: Figure
+figPrefix: [fig., figs.]
+lofTitle: |
+  # List of Figures
+tableTitle: Table
+tblPrefix: [tbl., tbls.]
+lotTitle: |
+  # List of Tables
+listingTitle: Listing
+lstPrefix: [lst., lsts.]
+lolTitle: |
+  # List of Listings
+eqnPrefix: [eq., eqns.]
+secPrefix: [sec., secs.]
+# translations for the custom template
+acronyms-title: Acronyms
+thesis-type: Master's Thesis
+thesis-university: Hochschule Düsseldorf
+thesis-faculty: Faculty of Media
+thesis-area-title: in the field of
+thesis-area: Media Informatics
+thesis-supervisor-title: Supervised by

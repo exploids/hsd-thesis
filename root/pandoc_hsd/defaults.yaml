@@ -1,0 +1,17 @@
+filters:
+  - ${.}/end.lua
+  - ${.}/bibliography.lua
+  - ${.}/headers.lua
+  - ${.}/tikzpicture.lua
+  - ${.}/diagrams.lua
+  # Add support for acronyms in Markdown
+  - ${.}/acronyms.lua
+  - ${.}/appendix.lua
+  - ${.}/inlinelistof.lua
+  - pandoc-crossref
+  # Also use citations for outputs other than PDF
+  - type: citeproc
+csl: /pandoc_hsd/iso690-author-date-patched.csl
+metadata-files:
+  - ${.}/metadata.yaml
+  - ${.}/metadata-de.yaml

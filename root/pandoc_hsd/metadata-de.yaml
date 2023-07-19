@@ -1,0 +1,38 @@
+lang: de
+biblio-title: Literaturverzeichnis
+months:
+  - Januar
+  - Februar
+  - März
+  - April
+  - Mai
+  - Juni
+  - Juli
+  - August
+  - September
+  - Oktober
+  - November
+  - Dezember
+# translations for pandoc-crossref (http://lierdakil.github.io/pandoc-crossref/)
+figureTitle: Abbildung
+figPrefix: Abbildung # Abb.
+lofTitle: |
+  # Abbildungsverzeichnis
+tableTitle: Tabelle
+tblPrefix: Tabelle # Tab.
+lotTitle: |
+  # Tabellenverzeichnis
+listingTitle: Listing
+lstPrefix: Listing # Lst.
+lolTitle: |
+  # Listingverzeichnis
+eqnPrefix: Gleichung
+secPrefix: Abschnitt # Abschn.
+# translations for the custom template
+acronyms-title: Abkürzungsverzeichnis
+thesis-type: Masterarbeit
+thesis-university: Hochschule Düsseldorf
+thesis-faculty: Fachbereich Medien
+thesis-area-title: im Fachgebiet
+thesis-area: Medieninformatik
+thesis-supervisor-title: Betreut von
