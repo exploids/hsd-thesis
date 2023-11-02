@@ -16,6 +16,12 @@ You can access a shell within the image using:
 docker run --rm -it --entrypoint /bin/sh exploids/hsd-thesis
 ```
 
+To list installed fonts:
+
+```sh
+docker run --rm -it --entrypoint /usr/bin/fc-list exploids/hsd-thesis | cut -f2 -d: | sort | uniq
+```
+
 ## Credits
 
 The CSL citation styles have been taken from the [Zotero Style Repository](https://www.zotero.org/styles?q=iso690).
