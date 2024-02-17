@@ -23,6 +23,8 @@ function Meta(meta)
 	if FORMAT:match 'latex' then
 		-- add package to prevent widows
 		table.insert(includes, pandoc.RawBlock("latex", "\\usepackage[all,defaultlines=3]{nowidow}"))
+		-- add package to allow inclusion of external PDFs
+		table.insert(includes, pandoc.RawBlock("latex", "\\usepackage{pdfpages}"))
 		-- add emoji support
 		if meta.emoji then
 			table.insert(includes, pandoc.RawBlock("latex", [[

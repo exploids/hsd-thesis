@@ -12,7 +12,7 @@ ENV CHROME_BIN="/usr/bin/chromium-browser" \
 	PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 RUN npm install -g @mermaid-js/mermaid-cli --unsafe-perm=true --allow-root
 # install packages for latex
-RUN tlmgr install adjustbox acronym bigfoot xstring nowidow upquote microtype
+RUN tlmgr install adjustbox acronym bigfoot xstring nowidow upquote microtype pdfpages
 # install plantuml
 RUN apk add --no-cache openjdk17-jre graphviz
 ENV PLANTUML_VERSION=1.2023.8
